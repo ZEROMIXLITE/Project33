@@ -5,7 +5,7 @@ Tesla::Tesla() {
 }
 
 
-Tesla::Tesla(string model, string color, int capacity, int speed)
+Tesla::Tesla(string model, string color)
 {
 	this->model = model;
 
