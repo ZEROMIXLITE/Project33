@@ -7,13 +7,13 @@ class Tesla {
 private:
 	string model;
 	string color;
-	int capacity;
-	int speed;
+
+	
 
 
 public:
 	Tesla();
-	Tesla(string model, string color, int capacity, int speed);
+	Tesla(string model, string color);
 	string getInfo();
 };
 
