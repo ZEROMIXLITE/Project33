@@ -1,19 +1,24 @@
+#include<ctime>
 #include "Tesla.h"
 #include "Factory.h"
 #include "Manager.h"
 
+void changeKost(Tesla st) {
+
+	srand(time(NULL));
+	st.setKost(rand() % 7 + 4);
+}
+
 int main() {
 
-	Factory Factory("3");
+	Factory Factory("1");
 	Manager manager1("Ilon Mask");
 
 	Tesla st1("KiberTrack", 14, 9, 'n');
-	Tesla st2("ModelX", 13, 8, 'X');
-	Tesla st3("ModelS", 15, 4, 'X');
+	
 
 	Factory.add(st1);
-	Factory.add(st2);
-	Factory.add(st3);
+
 
 	cout << Factory.getInfo() << endl;
 

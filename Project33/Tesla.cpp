@@ -3,14 +3,14 @@
 Tesla::Tesla() {
 	name = "no name";
 	age = 0;
-	mark = 0;
+	kost = 0;
 	condition = 'n';
 }
 
-Tesla::Tesla(string name, int age, double mark, char condition) {
+Tesla::Tesla(string name, int age, double kost, char condition) {
 	this->name = name;
 	this->age = age;
-	this->mark = mark;
+	this->kost = kost;
 	this->condition = condition;
 }
 
@@ -32,13 +32,13 @@ void Tesla::setAge(int age) {
 	}
 }
 
-double Tesla::getMark() {
-	return mark;
+double Tesla::getKost() {
+	return kost;
 }
 
-void Tesla::setMark(double mark) {
-	if (mark >= 0 && mark <= 10) {
-		this->mark = mark;
+void Tesla::setKost(double kost) {
+	if (kost >= 0 && kost <= 10) {
+		this->kost = kost;
 	}
 }
 char Tesla::getcondition() {
@@ -53,6 +53,6 @@ void Tesla::setcondition(char condition) {
 
 string Tesla::getInfo() {
 	return name + ": age = " + to_string(age)
-		+ "; mark = " + to_string(mark)
+		+ "; kost  = " + to_string(kost) + "sousen dollars"
 		+ "; condition = " + (condition == 'n' ? "now" : "isn't now");
 }
